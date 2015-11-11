@@ -1,0 +1,7 @@
+git clone "url"
+git status //Chheck the status of the folder for any changes
+git add "filename" //Staging area for updates to the github
+git log
+git remote add origin https://github.com/mridulja/MSDS7330ProjectRevA.git
+git push -u origin master // Push the changed and added file from the staging area to gitHub repository
+git pull origin master //pull from github repository

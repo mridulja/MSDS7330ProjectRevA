@@ -1,0 +1,3 @@
+Steps
+1. https://apps.twitter.com/app/7916823/keys : Generate Keys from twitter Applications
+2. Install tweetpy from google and install using "python tweetpy install"
