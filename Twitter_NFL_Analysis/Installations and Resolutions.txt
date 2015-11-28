@@ -1,0 +1,100 @@
+Install Oracle VM Box 
+Mount and install ubuntu linux from the downloaded .iso image of Ubuntu OS
+
+--- Ubuntu Linux Installation
+1. Screen Size resolution issues
+	- sudo apt-install update
+	- sudo apt-get install upgrade
+	- sudo apt-get install virtualbox-guest-utils
+	- sudo apt-get install virtualbox-guest-dkms
+	- sudo apt-get install virtualbox-guest-x11
+	- Sudo apt-get install virtualbox-ose-guest-x11
+	Go to Virtualbox menu -> Devices -> Insert Guest Additions CD image
+	- sudo sh ./VBoxLinuxAdditions.run
+	- Restart
+	
+2. Installing Python and Setting environment on Unbuntu in VMBox
+
+	- Download the Python-2.7.10.tgz from python.org
+	- Extract the downloaded file
+	- Start terminal
+	- sudo su (log in as super user)
+	- log in to folder where python installation files were unzipped previously
+	- run "./configure"
+	- then run "make"
+	- then finally run "sudo make altinstall"
+	
+3. Setting Up python Environment and virtual environment
+	- sudo apt-get install python-pip
+	- pip install Flask
+	- pip install jinja2
+	- sudo apt-get install python-virtualenv
+	- Check if the virtualenv is installed "virtualenv --version"
+
+4. Install pyCharm and java on Ubuntu client
+	- Download pyCharm and extract in the folder
+	- Run the following commands
+		- sudo add-apt-repository ppa:webupd8team/java
+		- sudo apt-get update
+		- sudo apt-get install oracle-java8-installer
+	Go to pyCharm extracted folder and cd to bin (cd bin)
+	- run "./pycharm.sh" located in /pycharm.../bin folder
+	- Once created start pycharm and create projects as needed
+	- Project location "/home/username/PycharmProjects/"
+
+5. Install and start using github on Ubuntu machine
+	- Installing : sudo apt-get install github
+	- Setting Up 
+		- git config --global user.name "username"
+		- git config --global user.email "user@email.com"
+		- git config --list
+	- git clone "url"
+	- git status //Chheck the status of the folder for any changes
+	- git add "filename" //Staging area for updates to the github
+	- git log
+	- git remote add origin https://github.com/mridulja/MSDS7330ProjectRevA.git
+	- git push -u origin master // Push the changed and added file from the staging area to gitHub repository
+	- git pull origin master //pull from github repository
+
+6. Create and activate Virtual Environment
+	- In a specific folder, run the following command to create python virtual environment (venv)
+	- virtualenv venv
+	Install flask and other dependencies in the local virtual environment as follows
+	- venv/bin/easy_install flask
+	Now activate the virtual environment ()venv)
+	- source venv/bin/activate
+	- create a python file and run in the browser using "http://127.0.0.1/5000/"
+
+7. Setting up vagrant on Windows machine
+	- Download vagrant from "https://www.vagrantup.com/downloads"
+	- Go to vagrantbox.es website and download a specific vagrant box to be used (for example precise32/) for example as below:
+		- Inside C:\Users\Mridul>VagrantBoxes for example 
+		- vagrant box add trusty64 https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box
+	- The above command will download the ubuntu installation in the folder
+	- run "vagrant box list" command to show the virtual boxes listed
+	- Once downloaded run the following commands and configurations
+		- vagrant init
+		Then go to "https://github.com/bradwestfall/vagrant-kickstarter/blob/master/Vagrantfile"
+		and copy the content of zip file including Vagrantfile from bradwestfall for vagrant best practices
+		paste the copied file in to the locally created vagrantfile (c:/users/Mridul/)
+	- run "vagrant up"
+	After installing and running vagrant virtual machine, ssh to vagrant
+	- vagrant ssh
+	- Exit from Vagrant ssh "exit"
+	- Shutdown Vagrant "vagrant halt"
+	
+	- In case we want to add some other programs installed for example python and pip etc, we should use the installation commands and update the provision file "provision-ubuntu-14.04" for example
+	- Since the vagrant is already up, to re-provision the new additions run the follwoing command
+	- "vagrant provision"
+	- In case the vagrant box is shutdown, to restart and re-provision we can use the following command
+	- "vagrant up --provision"
+
+8. Twitter API's and Libraries
+	- pip install tweepy==3.3.0
+	- easy_install twitter
+	- python -m nltk.downloader "http://lizusefulstuff.blogspot.com/2012/03/how-to-install-nltk-package-for-python.html"
+	- pip install nltk
+	- pip install pymongo
+	- 
+	
+	
