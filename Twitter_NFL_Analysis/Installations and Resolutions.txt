@@ -1,6 +1,10 @@
 Install Oracle VM Box 
 Mount and install ubuntu linux from the downloaded .iso image of Ubuntu OS
 
+Running SPARK :
+C:\spark\spark-1.5.1-bin-hadoop2.6\bin>spark-shell.cmd
+
+
 --- Ubuntu Linux Installation
 1. Screen Size resolution issues
 	- sudo apt-install update
@@ -95,6 +99,6 @@ Mount and install ubuntu linux from the downloaded .iso image of Ubuntu OS
 	- python -m nltk.downloader "http://lizusefulstuff.blogspot.com/2012/03/how-to-install-nltk-package-for-python.html"
 	- pip install nltk
 	- pip install pymongo
-	- 
+	- pip install vincent
 	
 	
